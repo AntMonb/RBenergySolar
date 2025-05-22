@@ -45,7 +45,7 @@ export default function Home() {
       {/* Hero Section */}
       <section id="inicio" className="relative h-screen flex items-center justify-center text-white overflow-hidden snap-start">
         <Image
-          src="/img/fond2.jpg"
+          src="/img/fond2.webp"
           alt="Paneles solares"
           layout="fill"
           objectFit="cover"
@@ -75,7 +75,7 @@ export default function Home() {
           data-aos="fade-left"
         >
           <div className="relative w-16 h-16 rounded-lg overflow-hidden">
-            <Image src="/img/instalacion_1.jpg" alt="Instalación solar" layout="fill" objectFit="cover" />
+            <Image src="/img/instalacion_1.webp" alt="Instalación solar" layout="fill" objectFit="cover" />
           </div>
           <div>
             <h3 className="font-bold text-base">Donde la sostenibilidad se fusiona con la innovación.</h3>
@@ -91,7 +91,7 @@ export default function Home() {
   {/* Imagen principal */}
   <div className="rounded-xl overflow-hidden shadow-xl">
     <Image
-      src="/img/fond3.jpg"
+      src="/img/fond3.webp"
       alt="RB Energía Acerca de"
       width={600}
       height={400}
@@ -102,7 +102,7 @@ export default function Home() {
   {/* Imagen superpuesta */}
   <div className="absolute -bottom-10 -right-10 w-48 h-32 rounded-xl overflow-hidden border-4 border-white shadow-2xl transform hover:scale-105 transition-transform duration-500">
     <Image
-      src="/img/acercade1.jpg"
+      src="/img/acercade1.webp"
       alt="RB Energía adicional"
       layout="fill"
       objectFit="cover"
@@ -132,7 +132,7 @@ Contamos con un equipo de especialistas en energía solar, comprometidos con la 
       <div className="relative h-[300px] overflow-hidden">
         <div
           className="absolute top-0 left-0 w-full h-full bg-fixed bg-center bg-cover bg-no-repeat scale-110 animate-[parallaxScroll_20s_linear_infinite]"
-          style={{ backgroundImage: "url('/img/nuestrosServicios.jpg')" }}
+          style={{ backgroundImage: "url('/img/nuestrosServicios.webp')" }}
         ></div>
         <div className="absolute inset-0 bg-black/60 flex items-center justify-center z-10">
           <h2 className="text-4xl font-bold text-yellow-400">Nuestros Servicios</h2>
@@ -151,7 +151,7 @@ Contamos con un equipo de especialistas en energía solar, comprometidos con la 
               className="relative bg-black/40 rounded-xl shadow-xl overflow-hidden hover:shadow-2xl"
             >
               <div className="relative w-full h-48">
-                <Image src={`/img/servicio${n}.jpg`} alt={`Servicio ${n}`} layout="fill" objectFit="cover" className="rounded-t-xl" />
+                <Image src={`/img/servicio${n}.webp`} alt={`Servicio ${n}`} layout="fill" objectFit="cover" className="rounded-t-xl" />
               </div>
               <div className="p-4">
                 <h3 className="text-xl font-bold mb-2 text-yellow-300">
@@ -179,7 +179,7 @@ Contamos con un equipo de especialistas en energía solar, comprometidos con la 
       <div className="relative h-[300px] overflow-hidden">
         <div
           className="absolute top-0 left-0 w-full h-full bg-fixed bg-center bg-cover bg-no-repeat scale-110 animate-[parallaxScroll_20s_linear_infinite]"
-          style={{ backgroundImage: "url('/img/fond2.jpg')" }}
+          style={{ backgroundImage: "url('/img/fond2.webp')" }}
         ></div>
         <div className="absolute inset-0 bg-black/60 flex items-center justify-center z-10">
           <h2 className="text-4xl font-bold text-yellow-400">Proyectos Destacados</h2>
@@ -196,7 +196,7 @@ Contamos con un equipo de especialistas en energía solar, comprometidos con la 
               className="bg-black/40 rounded-lg shadow-lg overflow-hidden"
             >
               <div className="relative h-48">
-                <Image src={`/img/proyecto${n}.jpg`} alt={`Proyecto ${n}`} layout="fill" objectFit="cover" />
+                <Image src={`/img/proyecto${n}.webp`} alt={`Proyecto ${n}`} layout="fill" objectFit="cover" />
               </div>
               <div className="p-4">
                 <h3 className="font-bold text-xl mb-2">Proyecto Solar #{n}</h3>
