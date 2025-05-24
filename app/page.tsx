@@ -16,7 +16,8 @@ export default function Home() {
   return (
     <main className="font-sans bg-gradient-to-b from-[#0a1a2f] via-[#0f243c] to-[#142c4c] text-white scroll-smooth">
       {/* Header */}
-      <header className="fixed top-0 w-full backdrop-blur-sm bg-[#0a1a2f]/80 px-6 py-4 z-50 shadow-md">
+      <header className="fixed top-0 w-full z-50 px-6 py-4 backdrop-blur-md bg-[#0a1a2f]/70 shadow-inner shadow-black/30 border-b border-white/10">
+
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-4">
             <Image src="/img/logoRB.svg" alt="RB Energía Solar Logo" width={120} height={50} />
@@ -33,11 +34,20 @@ export default function Home() {
 
           <div className="hidden md:flex items-center gap-4">
             <span className="text-yellow-400 font-semibold flex items-center gap-1">
-              <i className="bi bi-telephone-inbound"></i> +57 321-742-6680
+              <i className="bi bi-telephone-inbound"></i> +57 302-608-8408
             </span>
-            <a href="#contacto" className="bg-yellow-400 text-black px-4 py-2 rounded-full hover:bg-cyan-500 hover:text-white transition transform hover:-translate-y-1 shadow-lg">
-              Contáctanos
-            </a>
+
+            
+      <a
+  href="#contacto"
+  className="relative inline-flex items-center justify-center px-6 py-2 bg-yellow-500 rounded-full shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-300 overflow-hidden electricity-border"
+>
+  <span className="gradient-inner"></span>
+  <span className="relative font-semibold z-10 text-animate-color">Contáctanos</span>
+</a>
+
+
+
           </div>
         </div>
       </header>
@@ -216,24 +226,30 @@ Contamos con un equipo de especialistas en energía solar, comprometidos con la 
           <input type="text" placeholder="Nombre" className="p-3 rounded bg-black/40 backdrop-blur text-white" />
           <input type="email" placeholder="Correo electrónico" className="p-3 rounded bg-black/40 backdrop-blur text-white" />
           <textarea placeholder="Mensaje" rows={4} className="p-3 rounded bg-black/40 backdrop-blur text-white"></textarea>
-          <button type="submit" className="mt-2 bg-yellow-400 text-black py-3 rounded hover:bg-cyan-500 hover:text-white transition shadow-md">
-            Enviar Mensaje
-          </button>
+          <button
+  type="submit"
+  className="mt-2 bg-yellow-400 text-black py-3 rounded hover:bg-blue-600 hover:text-white transition shadow-md"
+>
+  Enviar Mensaje
+</button>
+
         </form>
       </section>
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/573217426680"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform transform hover:scale-110"
-        aria-label="WhatsApp"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 fill-current" viewBox="0 0 24 24">
-          <path d="M20.52 3.48A11.88 11.88 0 0 0 2.18 17.4L.2 24l6.75-1.97A11.88 11.88 0 1 0 20.52 3.48zm-8.62 17.4a9.84 9.84 0 0 1-5-1.35l-.36-.22-4 1.17 1.2-3.88-.24-.4A9.84 9.84 0 1 1 11.9 20.88zm5.4-7.27c-.3-.15-1.77-.88-2.04-.97s-.48-.15-.69.15-.78.96-.96 1.15-.36.22-.66.07a8 8 0 0 1-2.37-1.5 8.94 8.94 0 0 1-1.62-2.02c-.17-.3 0-.45.13-.6s.3-.36.45-.54.2-.3.3-.51a.61.61 0 0 0 0-.6c-.08-.15-.69-1.66-.95-2.26s-.5-.52-.69-.53-.39 0-.6 0a1.15 1.15 0 0 0-.84.39 3.5 3.5 0 0 0-1.1 2.63 6.09 6.09 0 0 0 1.3 3.15 13.73 13.73 0 0 0 5.36 4.65c.75.3 1.34.48 1.8.61a4.29 4.29 0 0 0 1.95.12 3.28 3.28 0 0 0 2.13-1.5 2.7 2.7 0 0 0 .18-1.5c-.07-.12-.27-.2-.57-.36z" />
-        </svg>
-      </a>
+  href="https://wa.me/573026088408"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110 whatsapp-button"
+  aria-label="WhatsApp"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 fill-current z-10 relative" viewBox="0 0 24 24">
+    <path d="M20.52 3.48A11.88 11.88 0 0 0 2.18 17.4L.2 24l6.75-1.97A11.88 11.88 0 1 0 20.52 3.48zm-8.62 17.4a9.84 9.84 0 0 1-5-1.35l-.36-.22-4 1.17 1.2-3.88-.24-.4A9.84 9.84 0 1 1 11.9 20.88zm5.4-7.27c-.3-.15-1.77-.88-2.04-.97s-.48-.15-.69.15-.78.96-.96 1.15-.36.22-.66.07a8 8 0 0 1-2.37-1.5 8.94 8.94 0 0 1-1.62-2.02c-.17-.3 0-.45.13-.6s.3-.36.45-.54.2-.3.3-.51a.61.61 0 0 0 0-.6c-.08-.15-.69-1.66-.95-2.26s-.5-.52-.69-.53-.39 0-.6 0a1.15 1.15 0 0 0-.84.39 3.5 3.5 0 0 0-1.1 2.63 6.09 6.09 0 0 0 1.3 3.15 13.73 13.73 0 0 0 5.36 4.65c.75.3 1.34.48 1.8.61a4.29 4.29 0 0 0 1.95.12 3.28 3.28 0 0 0 2.13-1.5 2.7 2.7 0 0 0 .18-1.5c-.07-.12-.27-.2-.57-.36z" />
+  </svg>
+  <span className="absolute inset-0 rounded-full bg-green-400 opacity-20 blur-lg animate-pulse pointer-events-none"></span>
+</a>
+
     </main>
   );
 }
