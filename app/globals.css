@@ -24,3 +24,206 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
+
+/*                      aqui empieza lo del boton */ 
+
+
+
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Tailwind base */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------- */
+/* ⚡ ELECTRICITY BORDER */
+/* -------------------- */
+@keyframes electricity {
+  0% {
+    box-shadow: 0 0 2px #facc15, 0 0 4px #facc15, 0 0 8px #facc15, 0 0 12px transparent;
+  }
+  50% {
+    box-shadow: 0 0 4px #facc15, 0 0 6px #facc15, 0 0 12px #facc15, 0 0 18px #facc15;
+  }
+  100% {
+    box-shadow: 0 0 2px #facc15, 0 0 4px #facc15, 0 0 8px #facc15, 0 0 12px transparent;
+  }
+}
+
+.electricity-border {
+  animation: electricity 2s infinite ease-in-out;
+  border: 2px solid #facc15;
+}
+
+/* ---------------------------------- */
+/* 🌈 RAINBOW INTERNAL GRADIENT GLOW  */
+/* ---------------------------------- */
+@keyframes rainbowGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-inner {
+  background: linear-gradient(
+    270deg,
+    #facc15,  /* amarillo solar */
+    #f59e0b,  /* naranja cálido */
+    #fcd34d,  /* dorado claro */
+    #ffffff,  /* blanco luz */
+    #facc15   /* repetir amarillo */
+  );
+  background-size: 600% 600%;
+  animation: rainbowGradient 10s ease infinite;
+  opacity: 0.25;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: 9999px;
+  filter: blur(12px);
+}
+
+
+@keyframes textColorShift {
+  0% {
+    color: #000000; /* negro */
+  }
+  33% {
+    color: #1e3a8a; /* azul oscuro - tailwind blue-900 */
+  }
+  66% {
+    color: #ffffff; /* blanco */
+  }
+  100% {
+    color: #000000;
+  }
+}
+
+.text-animate-color {
+  animation: textColorShift 6s ease-in-out infinite;
+}
+
+
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 5px #22c55e, 0 0 10px #22c55e, 0 0 15px #22c55e;
+  }
+  50% {
+    box-shadow: 0 0 10px #4ade80, 0 0 20px #4ade80, 0 0 30px #4ade80;
+  }
+  100% {
+    box-shadow: 0 0 5px #22c55e, 0 0 10px #22c55e, 0 0 15px #22c55e;
+  }
+}
+
+.whatsapp-button {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-rainbow {
+  background: linear-gradient(270deg, #ff0080, #ff8c00, #40e0d0, #8a2be2, #ff0080);
+  background-size: 600% 600%;
+  animation: rainbow 6s ease infinite;
+}
+
+
+
+
+
+
+@keyframes gradientShiftDark {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-inner-dark {
+  background: linear-gradient(
+    270deg,
+    #facc15,  /* amarillo solar */
+    #f59e0b,  /* naranja cálido */
+    #fcd34d,  /* dorado claro */
+    #1e3a8a,  /* azul oscuro */
+    #facc15
+  );
+  background-size: 600% 600%;
+  animation: gradientShiftDark 10s ease infinite;
+  opacity: 0.2;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: 9999px;
+  filter: blur(12px);
+}
+
+@keyframes animateTextGradientDark {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradientShiftDark {
+  background-size: 300% 300%;
+  animation: animateTextGradientDark 6s ease infinite;
+}
+
+
+/* globals.css */
+.header-glow {
+  background: linear-gradient(to right, rgba(10, 26, 47, 0.8), rgba(15, 36, 60, 0.8));
+  box-shadow: 
+    inset 0 0 15px rgba(0, 0, 0, 0.4),
+    inset 0 0 30px rgba(0, 0, 0, 0.2),
+    inset 0 0 50px rgba(0, 0, 0, 0.1);
+}
